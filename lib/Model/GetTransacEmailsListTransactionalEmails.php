@@ -459,7 +459,7 @@ class GetTransacEmailsListTransactionalEmails implements ModelInterface, ArrayAc
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -471,7 +471,7 @@ class GetTransacEmailsListTransactionalEmails implements ModelInterface, ArrayAc
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -484,7 +484,7 @@ class GetTransacEmailsListTransactionalEmails implements ModelInterface, ArrayAc
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -500,7 +500,7 @@ class GetTransacEmailsListTransactionalEmails implements ModelInterface, ArrayAc
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
